@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.personal {
+  flex: 0 0 325px;
+  background-color: #f0f0f0;
+  height: 100vh;
+  padding: 30px 40px 0;
+}
+
+.professional {
+  flex: 0 0 calc(100% - 325px);
+  height: 100vh;
+
+  max-height: 100vh;
+}
+
+.personal__image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.personal__image img {
+  width: 80%;
+  border: 0;
+  transition: all ease 0.2s;
+}
+
+.personal__image img:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.personal__name {
+  text-align: center;
+  padding: 20px 0 15px;
+}
+
+.personal__name span {
+  color: #423f41;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.personal__data {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.personal__data--item {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.personal__data--item-label,
+.personal__data--item-value {
+  text-align: center;
+}
+
+.personal__data--item-label span,
+.personal__data--item-value span {
+  color: #423f41;
+  font-size: 14px;
+}
+
+.personal__data--item-label span {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.personal__data--item-value span {
+  opacity: 0.9;
+}
+
+.professional__container {
+  padding: 30px 80px;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.card {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  padding: 20px 30px 30px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card__title h2 {
+  font-size: 22px;
+}
+
+.card__desription p {
+  line-height: 22px;
+}
+
+.card_skills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card__skill {
+  flex: 0 0 33.3333%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.card__skill--title {
+  flex: 0 0 80px;
+}
+
+.card__skill--bar {
+  flex: 0 0 120px;
+  background: #ddd;
+  height: 4px;
+  border-radius: 1px;
+  position: relative;
+}
+
+.card__skill--rating {
+  width: 60%;
+  background: #111;
+  height: 4px;
+  border-radius: 1px;
+  position: absolute;
+}
+
+.card__experience {
+  margin-bottom: 20px;
+}
+.card__experience--title {
+  margin-bottom: 10px;
+}
+
+.card__experience--title span {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.card__experience--mission {
+  margin-bottom: 2px;
+}
+
+@media screen and (max-width: 992px) {
+  .personal {
+    flex: 0 0 260px;
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 30px 40px 0;
+  }
+
+  .professional {
+    flex: 0 0 calc(100% - 260px);
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  .professional__container {
+    padding: 30px 30px;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personal {
+    flex: 1;
+    background-color: #f0f0f0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px 30px;
+  }
+
+  .professional {
+    flex: 1;
+    height: auto;
+    max-height: auto;
+  }
+
+  .professional__container {
+    padding: 30px 20px;
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .personal__image {
+    text-align: center;
+  }
+
+  .personal__image img {
+    max-width: 200px;
+  }
+
+  .card__skill {
+    flex: 0 0 100%;
+  }
+
+  .card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
