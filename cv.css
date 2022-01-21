@@ -93,7 +93,7 @@ body {
 
 .card {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-  padding: 20px 30px 30px 30px;
+  padding: 20px 30px 30px 50px;
   border-radius: 2px;
   cursor: pointer;
   transition: all ease 0.2s;
@@ -102,6 +102,10 @@ body {
 
 .card:hover {
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+}
+.education-p {
+  margin-top: 3px;
+  color: rgb(2, 116, 161);
 }
 
 .card__title h2 {
@@ -127,7 +131,7 @@ body {
 }
 
 .card__skill--title {
-  flex: 0 0 80px;
+  flex: 0 0 60px;
 }
 
 .card__skill--bar {
@@ -139,15 +143,23 @@ body {
 }
 
 .card__skill--rating {
-  width: 60%;
   background: #111;
   height: 4px;
   border-radius: 1px;
   position: absolute;
 }
+.w-90 {
+  width: 90%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-70 {
+  width: 70%;
+}
 
 .card__experience {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .card__experience--title {
   margin-bottom: 10px;
@@ -160,6 +172,12 @@ body {
 
 .card__experience--mission {
   margin-bottom: 2px;
+}
+.card__experience--mission span {
+  color: #423f41;
+}
+.card__desription p {
+  color: #423f41;
 }
 
 @media screen and (max-width: 992px) {
